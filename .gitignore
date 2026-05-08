@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+
+# secrets — never commit
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*.pem
+*.key
+
+# wrangler state
+.wrangler/
+.mf/
+
+# build output
+dist/
+build/
+.tsbuildinfo
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# backup files (sed -i.bak etc.)
+*.bak

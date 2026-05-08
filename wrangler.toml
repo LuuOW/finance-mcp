@@ -1,0 +1,22 @@
+name = "finance-mcp"
+main = "src/index.ts"
+compatibility_date = "2026-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Custom domain — wrangler creates DNS + cert automatically
+routes = [
+  { pattern = "money.ask-meridian.uk", custom_domain = true }
+]
+
+[vars]
+RP_NAME = "Personal Finance Vault"
+RP_ID = "money.ask-meridian.uk"
+ORIGIN = "https://money.ask-meridian.uk"
+
+# Secrets set via `wrangler secret put`:
+#   ADMIN_SECRET, USER_ID, OAUTH_CLIENT_ID
+
+[[kv_namespaces]]
+binding = "VAULT_KV"
+id = "6660224a111542f28f108cee3f8505f6"
+preview_id = "5fdef6983e734c03ba15d452f56c7636"

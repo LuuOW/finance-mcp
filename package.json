@@ -1,0 +1,21 @@
+{
+  "name": "finance-mcp",
+  "version": "0.2.0",
+  "description": "Personal finance MCP — passkey-bootstrapped OAuth, passwordless after setup.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "create-link": "node scripts/create-link.mjs"
+  },
+  "dependencies": {
+    "@simplewebauthn/server": "^11.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "typescript": "^5.5.0",
+    "wrangler": "^3.78.0"
+  }
+}
